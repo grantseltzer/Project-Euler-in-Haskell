@@ -25,6 +25,11 @@ three = do
 -- mog is a function that returns a list of a number, mod every number in a list. It's used in five
 -- to make the solution a tad bit more elequent.
 
+-- Find the largest palindrome made from the product of two 3-digit numbers.
+four = do
+        maximum [ x | y <- [100..999], z <- [y..999], let x=y*z, let s = show x, s==reverse s]
+
+
 mog :: (Integral a) => a -> [a] -> [a]
 mog _ [] = []
 mog n (r:rs) = (n `mod` r) : mog n rs
