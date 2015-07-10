@@ -31,5 +31,5 @@ mog n (r:rs) = (n `mod` r) : mog n rs
 
 -- 5) What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 five = do
-        head [ x | x <- [1..], (sum (mog x [1..20])) == 0]
+        head [ x | x <- [1..], (sum $ mog x [1..20]) == 0]
 
